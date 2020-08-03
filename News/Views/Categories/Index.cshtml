@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Categories>
+@{
+    ViewData["Title"] = "News Categories";
+}
+<!-- ======= Categories Section ======= -->
+<section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+        <header class="section-header">
+            <h3>News Categories</h3>
+            <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+        </header>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                @if (Model.Count() > 0)
+                {
+                    <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
+                        <a href="~/News/Index/@item.Id" style="color: #413e66; font-family: Montserrat" , sans-serif;">
+                            <div class="box">
+                                <div class="icon" style="background: #e1eeff;"><i class="ion-ios-paper-outline" style="color: #2282ff;"></i></div>
+                                <h4 class="title">
+                                    @item.Name
+                                </h4>
+                                <p class="description">@item.Description</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <p>No Categories Exists...</p>
+                }
+            }
+        </div>
+    </div>
+</section>
+<!-- End Categories Section -->

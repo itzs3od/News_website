@@ -1,0 +1,71 @@
+﻿@model New
+@{
+    ViewData["Title"] = "Update";
+}
+
+<br />
+<br />
+<center>
+    <h2>Update News</h2>
+</center>
+<br />
+
+<!-- ======= News Section ======= -->
+
+
+<div class="container" data-aos="fade-up">
+
+    <!-- ======= News Section ======= -->
+    <div class="row feature-item justify-content-center align-items-center">
+        <form method="post" asp-action="Update">
+            <div class="">
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="CategoryId" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label asp-for="Title" class="col-form-label"></label>
+                    </div>
+                    <div class="col-10">
+                        <input asp-for="Title" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label asp-for="Content" class="col-form-label"></label>
+                    </div>
+                    <div class="col-10">
+                        <textarea asp-for="Content" class="form-control"></textarea>
+                    </div>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label asp-for="Image" class="col-form-label"></label>
+                    </div>
+                    <div class="col-10">
+                        <input type="file" multiple asp-for="Image" class="form-control border-0" />
+                    </div>
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="submit" class="btn btn-info form-control" value="Update" />
+                            </div>
+                            <div class="col-6">
+                                <a href="~/News/Index/@ViewBag.CatId" class="btn btn-success form-control">Back to List</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @Html.AntiForgeryToken()
+        </form>
+    </div>
+</div>
+<br />
+<br />
+<!-- End News Section -->

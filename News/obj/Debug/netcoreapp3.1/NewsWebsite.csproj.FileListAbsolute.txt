@@ -1,0 +1,7 @@
+C:\Users\SAUD-PC\source\repos\News\News\News\obj\Debug\netcoreapp3.1\NewsWebsite.AssemblyInfoInputs.cache
+C:\Users\SAUD-PC\source\repos\News\News\News\obj\Debug\netcoreapp3.1\NewsWebsite.AssemblyInfo.cs
+C:\Users\SAUD-PC\source\repos\News\News\News\obj\Debug\netcoreapp3.1\NewsWebsite.csproj.CoreCompileInputs.cache
+C:\Users\SAUD-PC\source\repos\News\News\News\obj\Debug\netcoreapp3.1\NewsWebsite.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\SAUD-PC\source\repos\News\News\News\obj\Debug\netcoreapp3.1\NewsWebsite.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\SAUD-PC\source\repos\News\News\News\obj\Debug\netcoreapp3.1\NewsWebsite.RazorAssemblyInfo.cache
+C:\Users\SAUD-PC\source\repos\News\News\News\obj\Debug\netcoreapp3.1\NewsWebsite.RazorAssemblyInfo.cs

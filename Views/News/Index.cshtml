@@ -1,0 +1,47 @@
+﻿@model IEnumerable<New>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br />
+<br />
+<center>
+    <h2>@ViewBag.CategoryName News</h2>
+</center>
+<!-- ======= News Section ======= -->
+<section id="features" class="features">
+
+    <div class="container" data-aos="fade-up">
+
+
+        @foreach (var item in Model)
+        {
+            @if (Model.Count() > 0)
+            {
+                <div class="row feature-item">
+                    <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+                        <img src="~/assets/img/features-1.svg" width="70%" height="70%" class="img-fluid" alt="">
+                        <!-- IMAGE HERE -->
+                    </div>
+                    <div class="col-lg-7 wow fadeInUp pt-5 pt-lg-0" data-aos="fade-left" data-aos-delay="150">
+                        <h4 class="m-1">@item.Title</h4>
+                        <i class="m-1 text-secondary">@item.Date.ToShortDateString()</i>
+
+                        <p class="m-4">@item.Content</p>
+                        <br />
+
+                        @*<a href="~/News/Update/@item.Id">UPDATE</a> | <a href="~/News/Delete/@item.Id">DELETE</a>*@
+                    </div>
+                </div>
+                <hr class="m-5" />
+            }
+            else
+            {
+                <p>No News Exists...</p>
+            }
+        }
+
+    </div>
+</section>
+<!-- End News Section -->

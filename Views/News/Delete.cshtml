@@ -1,0 +1,62 @@
+﻿@model New
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<br />
+<br />
+<center>
+    <h2>Update News</h2>
+
+    <!-- ======= News Section ======= -->
+    <div class="container">
+        <form method="post" asp-action="Delete">
+            <div class="backgroundWhite">
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="CategoryId" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label asp-for="Title" class="col-form-label"></label>
+                    </div>
+                    <div class="col-5">
+                        <input asp-for="Title" readonly class="form-control" />
+                    </div>
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label asp-for="Content" class="col-form-label"></label>
+                    </div>
+                    <div class="col-5">
+                        <textarea asp-for="Content" readonly class="form-control"></textarea>
+                    </div>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label asp-for="Image" class="col-form-label"></label>
+                    </div>
+                    <div class="col-5">
+                        <input type="file" multiple readonly disabled asp-for="Image" class="form-control border-0" />
+                    </div>
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-5 offset-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="submit" class="btn btn-danger form-control" value="Delete" />
+                            </div>
+                            <div class="col-6">
+                                <a href="~/News/Index/@ViewBag.CatId" class="btn btn-success form-control">Back to List</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @Html.AntiForgeryToken()
+        </form>
+    </div>
+</center>
+<!-- End News Section -->
